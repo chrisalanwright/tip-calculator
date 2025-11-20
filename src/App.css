@@ -1,0 +1,186 @@
+.logo-img {
+  display: block;
+  height: 2.6rem;
+  width: 2.6rem;
+  object-fit: cover;
+  margin: 0;
+  background: transparent;
+  border: 2.5px solid #bfa046;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.logo-img {
+  display: block;
+  height: 4.2rem;
+  width: 4.2rem;
+  object-fit: cover;
+  margin: 0;
+  background: transparent;
+  border: 3.5px solid #bfa046;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+.reset-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 90%;
+  max-width: 260px;
+  min-width: 80px;
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+}
+.reset-btn:hover {
+  background: #b71c1c;
+}
+/* Large background box */
+.background-box {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #181a22;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+
+/* Section boxes stacked on top */
+.section-box {
+  background: #23283a;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.main-container {
+  max-width: 340px;
+  margin: 40px auto;
+  background: #181a22;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+}
+.employee-info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.employee-name,
+.employee-tip,
+.employee-hours {
+  flex: 1 1 0;
+  text-align: center;
+}
+/* Employee card shadow box */
+.employee-card {
+  padding: 1rem 0;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.employee-info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+/* Center the employees section */
+.employees-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Add spacing between button and text in employee list */
+.employee-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #101218;
+  margin: 0;
+  padding: 0;
+  color: #f8fafd;
+}
+
+.main-container {
+  max-width: 340px;
+  margin: 40px auto;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+h1,
+h2,
+h3 {
+  color: #bfa046;
+}
+
+input {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #444b5a;
+  border-radius: 4px;
+  background: #101218;
+  color: #f8fafd;
+  width: 90%;
+  max-width: 260px;
+  min-width: 80px;
+  display: block;
+}
+
+input::placeholder {
+  color: #b0b8c9;
+}
+
+button {
+  padding: 0.4rem 1rem;
+  background: #2d8cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0;
+  width: 90%;
+  max-width: 260px;
+  min-width: 80px;
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1a6ed8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
