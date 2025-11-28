@@ -11,6 +11,8 @@ function App() {
   const [expoPercent, setExpoPercent] = useState("");
   const [foodSales, setFoodSales] = useState("");
   const [expoAdded, setExpoAdded] = useState(false);
+  const [totalCash, setTotalCash] = useState("");
+  const [submittedCash, setSubmittedCash] = useState(0);
 
   // Add a new employee
   const addEmployee = (employee) => {
@@ -43,13 +45,20 @@ function App() {
     setEmployees(employees.filter((_, i) => i !== index));
   };
 
-  // Reset all fields
+  const handleCashSubmit = (e) => {
+    e.preventDefault();
+    if (!totalCash || isNaN(totalCash)) return;
+    setSubmittedCash(parseFloat(totalCash));
+  };
+
   const resetAll = () => {
     setEmployees([]);
     setExpoName("");
     setExpoPercent("");
     setFoodSales("");
     setExpoAdded(false);
+    setTotalCash("");
+    setSubmittedCash(0);
   };
 
   return (
@@ -70,6 +79,33 @@ function App() {
           </div>
         </div>
         <EmployeeForm onAdd={addEmployee} />
+        {/* Total Cash input below EmployeeForm, above Expo form */}
+        <form
+          onSubmit={handleCashSubmit}
+          style={{
+            marginTop: "1rem",
+            display: "flex",
+            flexDirection: "row",
+            gap: "0.75rem",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <input
+            name="totalCash"
+            type="number"
+            min="0"
+            step="0.01"
+            placeholder="Total Cash to Divide"
+            value={totalCash}
+            onChange={(e) => setTotalCash(e.target.value)}
+            style={{ maxWidth: 180 }}
+          />
+          <button type="submit" style={{ maxWidth: 120 }}>
+            Submit Cash
+          </button>
+        </form>
+        {/* Expo form below cash input */}
         <form
           style={{
             marginTop: "1rem",
@@ -120,8 +156,9 @@ function App() {
       <div className="section-box">
         <EmployeeList employees={employees} onRemove={removeEmployee} />
       </div>
+
       <div className="section-box">
-        <Results employees={employees} />
+        <Results employees={employees} totalCash={submittedCash} />
       </div>
       <button
         className="reset-btn"
